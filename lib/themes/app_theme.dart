@@ -31,5 +31,34 @@ class AppThemes {
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
       primaryColor: const Color.fromARGB(255, 125, 13, 97),
       appBarTheme: const AppBarTheme(color: primary, elevation: 0),
-      scaffoldBackgroundColor: Colors.black);
+      scaffoldBackgroundColor: Colors.black,
+
+
+      inputDecorationTheme:const InputDecorationTheme(
+floatingLabelStyle: TextStyle(
+  color: Colors.green),
+
+ enabledBorder: OutlineInputBorder(
+  borderSide: BorderSide(color: Colors.green),
+  borderRadius: BorderRadius.only(
+    bottomLeft: Radius.circular(10),
+    topRight: Radius.circular(10))
+ ),
+
+ focusedBorder: OutlineInputBorder(
+   borderSide: BorderSide(color: Colors.green),
+  borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  topRight: Radius.circular(10))
+ ),
+
+ border: OutlineInputBorder(
+   borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  topRight: Radius.circular(10))
+ )
+      )
+      );
+
+     
 }
