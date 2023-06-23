@@ -6,23 +6,26 @@ class CustonInputField extends StatelessWidget {
   final String? helperText;
   final IconData? icon;
   final IconData? suffixIcon;
-
-
+  final TextInputType? keyboardType;
+  final bool obscureText;
 
   const CustonInputField({
     super.key,
     this.hintText,
     this.labelText,
-    this.helperText, 
-    this.icon, 
+    this.helperText,
+    this.icon,
     this.suffixIcon,
-    
+    this.keyboardType,
+     this.obscureText= false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       //  autofocus: true,
+      keyboardType: keyboardType,
+      obscureText: obscureText,
       textCapitalization: TextCapitalization.words,
       initialValue: "",
       onChanged: (value) {
@@ -33,13 +36,13 @@ class CustonInputField extends StatelessWidget {
         return value.length < 4 ? "minimo son 4 letras" : null;
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      decoration:  InputDecoration(
+      decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
         helperText: helperText,
         suffixIcon: suffixIcon == null ? null : Icon(suffixIcon),
         // prefixIcon: Icon(Icons.verified_outlined)
-        icon: icon == null ? null: Icon(icon),
+        icon: icon == null ? null : Icon(icon),
       ),
     );
   }
