@@ -9,6 +9,9 @@ class CustonInputField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;
 
+  final String formProperty;
+  final Map<String, String> formValues;
+
   const CustonInputField({
     super.key,
     this.hintText,
@@ -17,7 +20,9 @@ class CustonInputField extends StatelessWidget {
     this.icon,
     this.suffixIcon,
     this.keyboardType,
-     this.obscureText= false,
+    this.obscureText = false,
+    required this.formProperty,
+    required this.formValues,
   });
 
   @override
@@ -29,6 +34,7 @@ class CustonInputField extends StatelessWidget {
       textCapitalization: TextCapitalization.words,
       initialValue: "",
       onChanged: (value) {
+        formValues[formProperty] = value;
         // print('value: $value');
       },
       validator: (value) {
