@@ -72,7 +72,7 @@ class InputScreen extends StatelessWidget {
                       DropdownMenuItem(value: "seo", child: Text("seo"))
                     ],
                     onChanged: (value) {
-                      print(value);
+                      // print(value);
                       formValues["role"] = value ?? "Admin";
                     },
                   ),
@@ -85,11 +85,11 @@ class InputScreen extends StatelessWidget {
                       onPressed: () {
                         FocusScope.of(context).requestFocus(FocusNode());
                         if (!myFormKey.currentState!.validate()) {
-                          print("formulario no validado");
+                          // print("formulario no validado");
                           return;
                         }
                         //  todo:imprimir valores dek formulario
-                        print(formValues);
+                        // print(formValues);
                       },
                     ),
                   )
