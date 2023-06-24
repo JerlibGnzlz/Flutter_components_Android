@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/themes/app_theme.dart';
-import 'package:flutter_components/widgets/custon_card_type_1.dart';
 
 class SliderScreen extends StatefulWidget {
   const SliderScreen({Key? key}) : super(key: key);
